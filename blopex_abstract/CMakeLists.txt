@@ -54,6 +54,11 @@ add_library(BLOPEX
   $<TARGET_OBJECTS:fortran_matrix>
 )
 
+target_include_directories(BLOPEX PUBLIC
+                                  ${CMAKE_CURRENT_SOURCE_DIR}/multivector
+                                  ${CMAKE_CURRENT_SOURCE_DIR}/krylov
+                                  ${CMAKE_CURRENT_SOURCE_DIR}/utilities)
+
 # Install rule.
 # ARCHIVE: Static libraries, DLL import libraries (DLL platforms)
 # LIBRARY: Module libraries, shared libraries (non-DLL platforms)

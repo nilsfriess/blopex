@@ -6,10 +6,11 @@ cmake_minimum_required (VERSION 2.8.8 FATAL_ERROR)
 
 project(MULTIVECTOR C) #'C' indicates that this is a C project
 
+include_directories(${CMAKE_CURRENT_SOURCE_DIR})
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../utilities)
+
 add_library(multivector OBJECT multivector.c)
-target_include_directories(multivector OBJECT PUBLIC ${CMAKE_CURRENT_SOURCE_DIR} ${CMAKE_CURRENT_SOURCE_DIR}/../utilities)
 add_library(temp_multivector OBJECT temp_multivector.c)
-target_include_directories(temp_multivector OBJECT PUBLIC ${CMAKE_CURRENT_SOURCE_DIR} ${CMAKE_CURRENT_SOURCE_DIR}/../utilities)
 
 # Install the header files to the include directory at destination.
 # The backslash after ${CMAKE_CURRENT_SOURCE_DIR} copies only the files.
