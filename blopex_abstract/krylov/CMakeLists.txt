@@ -7,8 +7,8 @@ cmake_minimum_required (VERSION 2.8.8 FATAL_ERROR)
 project(KRYLOV C) #'C' indicates that this is a C project
 
 include_directories(${CMAKE_CURRENT_SOURCE_DIR})
-include_directories(${CMAKE_SOURCE_DIR}/utilities)
-include_directories(${CMAKE_SOURCE_DIR}/multivector)
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../utilities)
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../multivector)
 
 # LOBPCG: Locally Optimal Block Preconditioned Conjugate Gradient Method
 add_library(lobpcg OBJECT lobpcg.c)
