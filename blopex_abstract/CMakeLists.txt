@@ -38,7 +38,6 @@ if (NOT CONFIGURED_ONCE)
        CACHE STRING "Flags used by the compiler during all build types."
        FORCE
   )
-  set(CMAKE_BUILD_TYPE Release CACHE STRING "default Release." FORCE)
 endif()
 
 # All DIRs added via add_subdirectory() must have a CMakeLists.txt
